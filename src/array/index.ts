@@ -1,1 +1,1 @@
-export const remove = (a, b, c) => a + b + c
+export const remove = (a: string, b: string, c: string) => 2

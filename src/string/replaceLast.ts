@@ -1,4 +1,16 @@
-export const replaceLast = (str, pattern, replacement) => {
+/**
+ * xxxx
+ * @param str 1
+ * @param pattern 2
+ * @param replacement 3
+ * @returns 4
+ * 
+ * @example
+ * ```ts
+ * const a = 123
+ * ```
+ */
+export const replaceLast = (str: string, pattern: string | RegExp, replacement: string) => {
   const match =
     typeof pattern === 'string'
       ? pattern

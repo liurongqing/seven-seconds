@@ -1,5 +1,6 @@
 const gulp = require('gulp')
 const rollup = require('rollup')
+const typedoc = require('gulp-typedoc')
 const rollupTypescript = require('@rollup/plugin-typescript')
 
 const { watch } = gulp
