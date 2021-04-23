@@ -1,5 +1,8 @@
 /**
  * 从对象中按给定选择器的一组属性取出对应的一组值
+ * 
+ * @category Object
+ * 
  * @param from 原对象
  * @param selectors 一组属性
  * @returns 一组值
