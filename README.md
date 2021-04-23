@@ -13,6 +13,8 @@ import { get } from 'seven-seconds'
 
 ## JEST 参考
 
+> https://jestjs.io/docs/expect
+
 ```ts
 // 匹配两个值相等
 expect().toBe()
