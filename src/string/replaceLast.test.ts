@@ -15,8 +15,3 @@ test('abcabdef 替换成 abcabdef', () => {
 test('abcabdef 替换成 abcabdef', () => {
   expect(replaceLast('abcabdef', /ad/, 'gg')).toBe('abcabdef');
 });
-
-// * replaceLast('abcabdef', 'ab', 'gg'); // 'abcggdef'
-//  * replaceLast('abcabdef', /ab/, 'gg'); // 'abcggdef'
-//  * replaceLast('abcabdef', 'ad', 'gg'); // 'abcabdef'
-//  * replaceLast('abcabdef', /ad/, 'gg'); // 'abcabdef'
