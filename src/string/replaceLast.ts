@@ -1,16 +1,22 @@
 /**
- * xxxx
- * @param str 1
- * @param pattern 2
- * @param replacement 3
- * @returns 4
+ * 替换字符串中最后一次匹配到的值
+ * 
+ * @category String
+ * 
+ * @param str 要替换的原字符串
+ * @param pattern 匹配的字符串或正则
+ * @param replacement 要替换成的字符串
+ * @returns 新的字符串
  * 
  * @example
  * ```ts
- * const a = 123
+ * replaceLast('abcabdef', 'ab', 'gg'); // 'abcggdef'
+ * replaceLast('abcabdef', /ab/, 'gg'); // 'abcggdef'
+ * replaceLast('abcabdef', 'ad', 'gg'); // 'abcabdef'
+ * replaceLast('abcabdef', /ad/, 'gg'); // 'abcabdef'
  * ```
  */
-export const replaceLast = (str: string, pattern: string | RegExp, replacement: string) => {
+export const replaceLast = (str: string, pattern: string | RegExp, replacement: string): string => {
   const match =
     typeof pattern === 'string'
       ? pattern

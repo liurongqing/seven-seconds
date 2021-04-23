@@ -21,6 +21,19 @@ gulp.task('build', () => {
     })
 })
 
+// gulp.task('docs', function () {
+//   return gulp.src(['src/index.ts']).pipe(
+//     typedoc({
+//       out: 'docs/',
+//       name: '函数库12'
+//     })
+//   )
+// })
+
 gulp.task('watch', function () {
   gulp.watch('./src/**/*.ts', gulp.series('build'))
 })
+
+// gulp.task('watch:docs', function () {
+//   gulp.watch('./src/**/*.ts', gulp.series('docs'))
+// })

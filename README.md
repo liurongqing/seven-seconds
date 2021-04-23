@@ -1,5 +1,5 @@
 ## 文档
-http://xx.com
+https://liurongqing.github.io/seven-seconds/
 
 TODO 开发中。
 1. 支持 typescript
