@@ -10,10 +10,11 @@
  * 
  * @example
  * ```ts
- * replaceLast('abcabdef', 'ab', 'gg'); // 'abcggdef'
- * replaceLast('abcabdef', /ab/, 'gg'); // 'abcggdef'
- * replaceLast('abcabdef', 'ad', 'gg'); // 'abcabdef'
- * replaceLast('abcabdef', /ad/, 'gg'); // 'abcabdef'
+ * import { replaceLast } from 'seven-seconds'
+ * replaceLast('abcabdef', 'ab', 'gg') // 'abcggdef'
+ * replaceLast('abcabdef', /ab/, 'gg') // 'abcggdef'
+ * replaceLast('abcabdef', 'ad', 'gg') // 'abcabdef'
+ * replaceLast('abcabdef', /ad/, 'gg') // 'abcabdef'
  * ```
  */
 export const replaceLast = (str: string, pattern: string | RegExp, replacement: string): string => {

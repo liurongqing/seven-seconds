@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for replaceLast.ts</title>
+    <title>Code coverage report for get.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> replaceLast.ts</h1>
+        <h1><a href="index.html">All files</a> get.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,14 +32,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -78,15 +78,7 @@
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
-<a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L22'></a><a href='#L22'>22</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -101,50 +93,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * 替换字符串中最后一次匹配到的值
- * 
- * @category String
- * 
- * @param str 要替换的原字符串
- * @param pattern 匹配的字符串或正则
- * @param replacement 要替换成的字符串
- * @returns 新的字符串
+ * 从对象中按给定选择器的一组属性取出对应的一组值
+ * @param from 原对象
+ * @param selectors 一组属性
+ * @returns 一组值
  * 
  * @example
- * ```ts
- * import { replaceLast } from 'seven-seconds'
- * replaceLast('abcabdef', 'ab', 'gg') // 'abcggdef'
- * replaceLast('abcabdef', /ab/, 'gg') // 'abcggdef'
- * replaceLast('abcabdef', 'ad', 'gg') // 'abcabdef'
- * replaceLast('abcabdef', /ad/, 'gg') // 'abcabdef'
- * ```
+ * import { get } from 'seven-seconds'
+ * const obj = {
+ *   selector: { to: { val: 'val to select' } },
+ *   target: [1, 2, { a: 'test' }],
+ * }
+ * get(obj, 'selector.to.val', 'target[0]', 'target[2].a');
+ * // ['val to select', 1, 'test']
  */
-export const replaceLast = (str: string, pattern: string | RegExp, replacement: string): string =&gt; {
-  const match =
-    typeof pattern === 'string'
-      ? pattern
-      : (str.match(new RegExp(pattern.source, 'g')) || []).slice(-1)[0];
-  if (!match) return str;
-  const last = str.lastIndexOf(match);
-  return last !== -1
-    ? `${str.slice(0, last)}${replacement}${str.slice(last + match.length)}`
-    : str;
-};</pre></td></tr></table></pre>
+export const get = (from: Object, ...selectors: string[]) =&gt;
+  [...selectors].map(s =&gt;
+    s.replace(/\[([^\[\]]*)\]/g, '.$1.')
+      .split('.')
+      .filter((t: string) =&gt; t !== '')
+      .reduce((prev: Object, cur: string) =&gt; prev &amp;&amp; prev[cur], from)
+  )</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
