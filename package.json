@@ -1,0 +1,19 @@
+{
+  "name": "seven-seconds",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "repository": "git@github.com:liurongqing/seven-seconds.git",
+  "author": "liurongqing <phpgege@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.1",
+    "gulp": "^4.0.2",
+    "rollup": "^2.45.2",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  }
+}

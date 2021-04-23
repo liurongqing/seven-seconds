@@ -1,0 +1,1 @@
+export const remove = (a, b, c) => a + b + c
