@@ -1,0 +1,1 @@
+export { replaceLast } from './replaceLast'
