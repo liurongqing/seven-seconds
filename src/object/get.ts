@@ -8,6 +8,7 @@
  * @returns 一组值
  * 
  * @example
+ * ```ts
  * import { get } from 'seven-seconds'
  * const obj = {
  *   selector: { to: { val: 'val to select' } },
@@ -15,6 +16,7 @@
  * }
  * get(obj, 'selector.to.val', 'target[0]', 'target[2].a');
  * // ['val to select', 1, 'test']
+ * ```
  */
 export const get = (from: Object, ...selectors: string[]) =>
   [...selectors].map(s =>

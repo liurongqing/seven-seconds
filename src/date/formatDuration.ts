@@ -4,11 +4,14 @@
  * @returns 可读格式的字符串
  * 
  * @example
+ * ```ts
+ * import { formatDuration } from './formatDuration'
  * formatDuration(1001); // '1 second, 1 millisecond'
  * formatDuration(34325055574);
  * // '397 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds'
+ * ```
  */
-const formatDuration = (ms: number) => {
+export const formatDuration = (ms: number) => {
   if (ms < 0) ms = -ms
   const time = {
     day: Math.floor(ms / 86400000),

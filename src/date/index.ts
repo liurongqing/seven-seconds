@@ -1,1 +1,1 @@
-export { replaceLast } from './replaceLast'
+export { formatDuration } from './formatDuration'
