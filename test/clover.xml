@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1619314687979" clover="3.2.0">
-  <project timestamp="1619314687979" name="All files">
-    <metrics statements="16" coveredstatements="16" conditionals="14" coveredconditionals="14" methods="8" coveredmethods="8" elements="38" coveredelements="38" complexity="0" loc="16" ncloc="16" packages="3" files="3" classes="3"/>
+<coverage generated="1619315613446" clover="3.2.0">
+  <project timestamp="1619315613446" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="16" coveredconditionals="16" methods="10" coveredmethods="10" elements="45" coveredelements="45" complexity="0" loc="19" ncloc="19" packages="3" files="4" classes="4"/>
     <package name="date">
       <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
       <file name="formatDuration.ts" path="/Users/liurongqing/www/github/seven-seconds/src/date/formatDuration.ts">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="15" type="stmt"/>
-        <line num="23" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="15" type="stmt"/>
+        <line num="26" count="9" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="object">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="get.ts" path="/Users/liurongqing/www/github/seven-seconds/src/object/get.ts">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
-        <line num="24" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
+        <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="string">
-      <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+      <file name="getURLParameters.ts" path="/Users/liurongqing/www/github/seven-seconds/src/string/getURLParameters.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+      </file>
       <file name="replaceLast.ts" path="/Users/liurongqing/www/github/seven-seconds/src/string/replaceLast.ts">
         <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
         <line num="20" count="1" type="stmt"/>
